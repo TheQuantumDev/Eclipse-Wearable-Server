@@ -41,9 +41,9 @@ app.put("/api/collections/:id", updateCollection);
 app.delete("/api/collections/:id", deleteCollection);
 
 /*
-  * For development purposes, the server will listen on localhost 3001
-  * But will listen on a render server when in production
-*/ 
+ * For development purposes, the server will listen on localhost 3001
+ * But will listen on a render server when in production
+ */
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Eclipse Wearable server running on http://localhost:${PORT}`);
