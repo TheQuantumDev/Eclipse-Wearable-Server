@@ -37,12 +37,12 @@ const collectionSchema = new mongoose.Schema({
   },
   sizes: {
     type: [String],
-    required: true,
     enum: ["S", "M", "L", "XL", "XXL"],
     default: ["M", "L"],
   },
   description: {
     type: String,
+    required: true,
     maxLength: 500,
   },
   inStock: {
