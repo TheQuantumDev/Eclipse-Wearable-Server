@@ -37,6 +37,7 @@ const collectionSchema = new mongoose.Schema({
   },
   sizes: {
     type: [String],
+    required: true,
     enum: ["S", "M", "L", "XL", "XXL"],
     default: ["M", "L"],
   },
