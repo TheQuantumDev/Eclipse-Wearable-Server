@@ -1,6 +1,15 @@
+// Models/Model.Collections.ts
 import mongoose from "mongoose";
+import { v7 as uuidv7 } from "uuid";
 
 const collectionSchema = new mongoose.Schema({
+  uuid: {
+    type: String,
+    required: true,
+    unique: true,
+    index: true,
+    default: () => uuidv7(),
+  },
   name: {
     type: String,
     required: true,
@@ -33,7 +42,7 @@ const collectionSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    maxlength: 500,
+    maxLength: 500,
   },
   inStock: {
     type: Boolean,
@@ -45,8 +54,9 @@ const collectionSchema = new mongoose.Schema({
   },
 });
 
+// Index for faster lookups
 collectionSchema.index({ category: 1, createdAt: -1 });
 
-const Collection = mongoose.model("Collection", collectionSchema);
+const Collections = mongoose.model("Collections", collectionSchema);
 
-export default Collection;
+export default Collections;

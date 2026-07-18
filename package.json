@@ -2,13 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/TheQuantumDev/EclipseWearable-Server-Side#readme",
+  "homepage": "https://github.com/TheQuantumDev/Eclipse-Wearable-Server#readme",
   "bugs": {
-    "url": "https://github.com/TheQuantumDev/EclipseWearable-Server-Side/issues"
+    "url": "https://github.com/TheQuantumDev/Eclipse-Wearable-Server/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheQuantumDev/EclipseWearable-Server-Side.git"
+    "url": "git+https://github.com/TheQuantumDev/Eclipse-Wearable-Server.git"
   },
   "license": "ISC",
   "author": "The QuantumDev",
@@ -17,7 +17,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.ts",
-    "build": "tsc src"
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@types/cors": "^2.8.19",

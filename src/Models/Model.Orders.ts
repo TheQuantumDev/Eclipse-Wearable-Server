@@ -66,7 +66,7 @@ const orderSchema = new mongoose.Schema({
   },
   paymentMethod: {
     type: String,
-    enum: ["paystack", "pay_on_delivery"],
+    enum: ["paystack"],
     required: true,
   },
   paymentStatus: {

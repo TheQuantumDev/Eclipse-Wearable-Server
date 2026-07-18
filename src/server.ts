@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import { handleAdminCheck } from "./Controllers/adminCheckController.ts";
+import { handleAdminCheck } from "./Controllers/Controllers.AdminCheck.ts";
 
 import {
   fetchCollections,
@@ -10,7 +10,7 @@ import {
   addCollection,
   updateCollection,
   deleteCollection,
-} from "./Controllers/collectionsController.ts";
+} from "./Controllers/Controllers.Collections.ts";
 
 import { connectCollectionsDB } from "./Config/DB.Collections.ts";
 import { connectOrdersDB } from "./Config/DB.Orders.ts";
@@ -34,6 +34,7 @@ app.use(express.json());
 app.post("/api/admin-check", handleAdminCheck);
 
 // Collections Routes
+// TODO: Add the handleAdminCheck controller before the collection controllers
 app.get("/api/collections", fetchCollections);
 app.get("/api/collections/:id", fetchSingleCollection);
 app.post("/api/collections", addCollection);
